@@ -9,11 +9,13 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
 
-            Pelicula miPelicula = new Pelicula();
-            miPelicula.setNombre("La familia del futuro");
-            miPelicula.setFechaDeLanzamiento(2007);
+            Pelicula miPelicula = new Pelicula("La familia del futuro", 2007);
+ //           miPelicula.setFechaDeLanzamiento(2007);
             miPelicula.setDuracionEnMinutos(95);
             miPelicula.setIncluidoEnElPlan(true);
+
+
+            System.out.println("--------------------------------");
 
             miPelicula.muestraFichaTecnica();
             miPelicula.evalua(10);
@@ -22,18 +24,17 @@ public class Principal {
             System.out.println(miPelicula.getTotalDelasEvaluaciones());
             System.out.println("Média de evaluaciones de la película: " +miPelicula.calculaMedia());
 
-            Serie casadragon = new Serie();
-            casadragon.setNombre("La casa del Dragon");
-            casadragon.setFechaDeLanzamiento(2022);
+            Serie casadragon = new Serie("La casa del Dragon", 2022);
+            //casadragon.setFechaDeLanzamiento(2022);
             casadragon.setTemporadas(1);
             casadragon.setMinutosporEpisodio(50);
             casadragon.setEpisodioporTemporada(10);
             casadragon.muestraFichaTecnica();
             System.out.println(casadragon.getDuracionEnMinutos());
-
-            Pelicula otraPelicula = new Pelicula();
-            otraPelicula.setNombre("Matrix");
-            otraPelicula.setFechaDeLanzamiento(1998);
+            System.out.println("Serie: "+casadragon.getNombre());
+            System.out.println("---------------------------------");
+            Pelicula otraPelicula = new Pelicula("Matrix", 1998);
+            //otraPelicula.setFechaDeLanzamiento(1998);
             otraPelicula.setDuracionEnMinutos(180);
 
             CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
@@ -53,8 +54,8 @@ public class Principal {
 
             filtroRecomendacion.filtra(episodio);
             System.out.println("-----------------------------------------");
-            var peliculadeBruno = new Pelicula();
-            peliculadeBruno.setNombre("El Señor de los Anillos");
+            
+            var peliculadeBruno = new Pelicula("El Señor de los Anillos", 2021);
             peliculadeBruno.setDuracionEnMinutos(180);
             peliculadeBruno.setFechaDeLanzamiento(2021);
 
@@ -65,5 +66,6 @@ public class Principal {
             System.out.println("Tamaño de la lista: "+ listaDePeliculas.size());
             System.out.println("la primera pelicula es: "+ listaDePeliculas.get(0).getNombre());
             System.out.println(listaDePeliculas);
+
+            }
         }
-}
