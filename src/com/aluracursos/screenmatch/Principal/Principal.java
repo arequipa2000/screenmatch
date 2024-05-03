@@ -1,3 +1,5 @@
+package com.aluracursos.screenmatch.Principal;
+
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 import com.aluracursos.screenmatch.calculos.FiltroRecomendacion;
 import com.aluracursos.screenmatch.modelos.Episodio;
@@ -32,6 +34,7 @@ public class Principal {
             casadragon.muestraFichaTecnica();
             System.out.println(casadragon.getDuracionEnMinutos());
             System.out.println("Serie: "+casadragon.getNombre());
+
             System.out.println("---------------------------------");
             Pelicula otraPelicula = new Pelicula("Matrix", 1998);
             //otraPelicula.setFechaDeLanzamiento(1998);

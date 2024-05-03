@@ -40,4 +40,9 @@ public class Serie extends Titulo{
     public void setMinutosporEpisodio(int minutosporEpisodio) {
         this.minutosporEpisodio = minutosporEpisodio;
     }
+
+    @Override
+    public String toString() {
+        return "Serie: "+ this.getNombre()+" ("+ this.getFechaDeLanzamiento()+")";
+    }
 }
